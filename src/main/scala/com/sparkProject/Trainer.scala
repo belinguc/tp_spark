@@ -126,7 +126,7 @@ object Trainer {
     /** Entraînement du classifieur et réglage des hyper-paramètres de l’algorithme **/
     // Créer une grille de valeurs à tester pour les hyper-paramètres
     val paramGrid = new ParamGridBuilder()
-      .addGrid(lr.regParam, Array(1.0e-8, 10e-6, 10e-4, 10e-2))
+      .addGrid(lr.regParam, Array(10e-8, 10e-6, 10e-4, 10e-2))
       .addGrid(vectorizer.minDF, Array(55.0, 75.0, 95.0))
       .build()
 
